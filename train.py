@@ -53,7 +53,7 @@ checkpoints = ModelCheckpoint("checkpoints/weights.{epoch:02d}.h5",
 
 model.fit_generator(train_generator,
                         steps_per_epoch=8000,
-                        nb_epoch=5,
+                        epochs=5,
                         validation_data=validation_generator,
                         validation_steps=800,
                         callbacks = [checkpoints])
